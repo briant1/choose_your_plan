@@ -1,4 +1,4 @@
-
+alert('replit');
 var quiz = {
   currentStep: 1,
   totalSteps: 1,
