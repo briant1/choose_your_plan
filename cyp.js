@@ -1,4 +1,4 @@
-
+alert('hi');
 var quiz = {
   currentStep: 1,
   totalSteps: 1,
@@ -19,8 +19,8 @@ var quiz = {
       var percentFull = Math.round((parseInt($('.js-percent').css('width'))/parseInt($('.js-percent-bar').css('width')))*100);
       $('.js-percent-number').text(percentFull+"%");
       if (percentFull == 100) {
-      $('.js-percent-bar').hide();
-      $('.js-configure-btn').show();
+        $('.js-percent-bar').hide();
+        $('.js-configure-btn').show();
       }
     });
     $('.back').on('click', function(){
@@ -40,10 +40,9 @@ var quiz = {
       quiz.themes.push(themeImg.data('theme'));
       themeImg.addClass('animate__rollOut');
       quiz.nextTheme();
-      
     });
     $('.js-nope-btn').on('click', function(){
-      quiz.getCurrentTheme().fadeOut();
+      quiz.getCurrentTheme().addClass("animate__fadeOut");
       quiz.nextTheme();
     });
   },
@@ -59,7 +58,7 @@ var quiz = {
     });
     quiz.currentTheme++;
     theme = quiz.getCurrentTheme();
-    theme.fadeIn();
+    theme.addClass("animate__delayQuick animate__fadeIn");
   },
   next: function(){
     var currentStep = quiz.getCurrentStep();
