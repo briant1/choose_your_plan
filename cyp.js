@@ -1,4 +1,4 @@
-
+alert('hi');
 
 var quiz = {
   currentStep: 1,
