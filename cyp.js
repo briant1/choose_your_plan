@@ -1,4 +1,5 @@
 
+alert("TEST");
 var quiz = {
   currentStep: 1,
   totalSteps: 1,
