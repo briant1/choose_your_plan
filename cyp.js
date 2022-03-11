@@ -1,4 +1,4 @@
-alert('replit update');
+alert('replit updatee');
 var quiz = {
   currentStep: 1,
   totalSteps: 1,
