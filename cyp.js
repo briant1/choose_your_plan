@@ -113,6 +113,9 @@ var quiz = {
       quiz.pickThemes();
     }
     $('.js-cyp-title').text(currentStep.data('title'));
+
+    $('.cyp-container').css('z-index',9);
+    currentStep.css('z-index', 10);
   },
   pickThemes: function(){
   	var themes = $('.js-select-theme');
