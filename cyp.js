@@ -34,6 +34,9 @@ var quiz = {
     $('.js-select-level').on('click', function(){
     	quiz.level = $(this).data('skill-level');
     });
+    $('.js-cyp-close').on('click', function(){
+      $('.js-flash-sale-banner').fadeOut();
+    });
     $('.js-puzzle-with .js-option').on('click', function(){
     	var puzzleWith = $(this).data('puzzle-with');
       $('.js-quote').hide();
@@ -60,6 +63,9 @@ var quiz = {
       themeImg.addClass("animate__fadeOutLeftBig");
       quiz.nextTheme();
     });
+    setTimeout(function(){
+      $('.js-flash-sale-banner').fadeIn();
+    },3000)
   },
   getCurrentTheme: function(){
     return $($('.js-select-theme')[quiz.currentTheme]);
