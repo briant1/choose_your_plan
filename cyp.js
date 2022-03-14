@@ -59,6 +59,9 @@ var quiz = {
     quiz.currentTheme++;
     theme = quiz.getCurrentTheme();
     theme.addClass("animate__delayQuick animate__fadeIn");
+    theme[0].addEventListener('animationend', function(){
+      $(this).removeClass('animate__delayQuick');
+    });
   },
   next: function(){
     var currentStep = quiz.getCurrentStep();
