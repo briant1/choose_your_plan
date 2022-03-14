@@ -43,7 +43,12 @@ var quiz = {
         $('.js-christmas-quote').show();
       }
     });
-    
+    $('.js-someone-else').on('click', function(){
+			$('.js-someone-else-popup').fadeIn();
+    });
+    $('.js-continue-someone-else').on('click', function(){
+			$('.js-someone-else-popup').fadeOut();
+    });
     $('.js-love-btn').on('click', function(){
 			var themeImg = quiz.getCurrentTheme();
       themeImg.addClass('animate__rollOut');
