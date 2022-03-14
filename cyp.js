@@ -34,6 +34,15 @@ var quiz = {
     $('.js-select-level').on('click', function(){
     	quiz.level = $(this).data('skill-level');
     });
+    $('.js-puzzle-with .js-option').on('click', function(){
+    	var puzzleWith = $(this).data('puzzle-with');
+      $('.js-quote').hide();
+      if (puzzleWith == 'date') {
+        $('.js-date-quote').show();
+      } else {
+        $('.js-christmas-quote').show();
+      }
+    });
     
     $('.js-love-btn').on('click', function(){
 			var themeImg = quiz.getCurrentTheme();
