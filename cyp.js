@@ -46,12 +46,13 @@ var quiz = {
     
     $('.js-love-btn').on('click', function(){
 			var themeImg = quiz.getCurrentTheme();
-      quiz.themes.push(themeImg.data('theme'));
       themeImg.addClass('animate__rollOut');
       quiz.nextTheme();
     });
     $('.js-nope-btn').on('click', function(){
-      quiz.getCurrentTheme().addClass("animate__fadeOutLeftBig");
+			var themeImg = quiz.getCurrentTheme();
+      quiz.themes.push(themeImg.data('theme'));
+      themeImg.addClass("animate__fadeOutLeftBig");
       quiz.nextTheme();
     });
   },
