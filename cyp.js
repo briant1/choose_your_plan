@@ -35,7 +35,7 @@ var quiz = {
     	quiz.level = $(this).data('skill-level');
     });
     $('.js-cyp-close').on('click', function(){
-      $('.js-flash-sale-banner').fadeOut();
+      $('.js-flash-sale-banner').addClass("animate__fadeOutUp");
     });
     $('.js-puzzle-with .js-option').on('click', function(){
     	var puzzleWith = $(this).data('puzzle-with');
