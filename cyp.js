@@ -64,7 +64,7 @@ var quiz = {
       quiz.nextTheme();
     });
     setTimeout(function(){
-      $('.js-flash-sale-banner').addClass("fadeInDown");
+      $('.js-flash-sale-banner').addClass("animate__fadeInDown");
     },3000)
   },
   getCurrentTheme: function(){
