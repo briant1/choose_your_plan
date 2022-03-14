@@ -42,7 +42,7 @@ var quiz = {
       quiz.nextTheme();
     });
     $('.js-nope-btn').on('click', function(){
-      quiz.getCurrentTheme().addClass("animate__fadeOut");
+      quiz.getCurrentTheme().addClass("animate__fadeOutLeftBig");
       quiz.nextTheme();
     });
   },
