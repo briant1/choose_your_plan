@@ -145,10 +145,18 @@ var quiz = {
     if (currentStep.data('pick-themes')) {
       quiz.pickThemes();
     }
+    if (currentStep.data('choose-your-plan')) {
+      quiz.cyp();
+    }
     $('.js-cyp-title').text(currentStep.data('title'));
 
     $('.cyp-container').css('z-index',9);
     currentStep.css('z-index', 10);
+  },
+  cyp: function() {
+    setTimeout(function(){
+      $('.js-flash-sale-banner').addClass("animate__fadeInDown").show();
+    },1500)
   },
   pickThemes: function(){
   	var themes = $('.js-select-theme');
@@ -160,9 +168,6 @@ var quiz = {
     setTimeout(function(){
       quiz.configurePlanProgress(0,70,43);
     },1500);
-    setTimeout(function(){
-      $('.js-flash-sale-banner').addClass("animate__fadeInDown").show();
-    },3000)
   },
   configurePlanProgress: function(start,end,interval){
     var intervalId = setInterval(function(){
