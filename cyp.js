@@ -87,6 +87,7 @@ var quiz = {
       }
     });
     quiz.currentTheme++;
+    $('.js-puzzle-meter-progress').width(quiz.currentTheme/$('.js-select-theme').length);
     theme = quiz.getCurrentTheme();
     theme.addClass("animate__delayQuick animate__fadeIn");
     theme[0].addEventListener('animationend', function(){
