@@ -80,13 +80,15 @@ var quiz = {
     var theme = quiz.getCurrentTheme();
     theme[0].addEventListener('animationend', function(){
       if (quiz.currentTheme == $('.js-select-theme').length) {
-        quiz.next();
+        setTimeout(function(){ 
+          quiz.next();
+        }, 1500);
+        $('.js-select-theme-end').fadeIn();
       }
     });
     quiz.currentTheme++;
     theme = quiz.getCurrentTheme();
-    $('.js-select-theme-end').fadeIn();
-    theme.addClass("animate__delay-1s animate__fadeIn");
+    theme.addClass("animate__delayQuick animate__fadeIn");
     theme[0].addEventListener('animationend', function(){
       $(this).removeClass('animate__delayQuick');
     });
