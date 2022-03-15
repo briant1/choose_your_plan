@@ -85,7 +85,8 @@ var quiz = {
     });
     quiz.currentTheme++;
     theme = quiz.getCurrentTheme();
-    theme.addClass("animate__delayQuick animate__fadeIn");
+    $('.js-select-theme-end').fadeIn();
+    theme.addClass("animate__delay-1s animate__fadeIn");
     theme[0].addEventListener('animationend', function(){
       $(this).removeClass('animate__delayQuick');
     });
@@ -158,7 +159,7 @@ var quiz = {
       quiz.configurePlanProgress(0,70,43);
     },1500);
     setTimeout(function(){
-      $('.js-flash-sale-banner').addClass("animate__fadeInDown");
+      $('.js-flash-sale-banner').addClass("animate__fadeInDown").show();
     },3000)
   },
   configurePlanProgress: function(start,end,interval){
