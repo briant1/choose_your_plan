@@ -71,9 +71,7 @@ var quiz = {
       });
       quiz.nextTheme();
     });
-    setTimeout(function(){
-      $('.js-flash-sale-banner').addClass("animate__fadeInDown");
-    },3000)
+    
   },
   getCurrentTheme: function(){
     return $($('.js-select-theme')[quiz.currentTheme]);
@@ -159,6 +157,9 @@ var quiz = {
     setTimeout(function(){
       quiz.configurePlanProgress(0,70,43);
     },1500);
+    setTimeout(function(){
+      $('.js-flash-sale-banner').addClass("animate__fadeInDown");
+    },3000)
   },
   configurePlanProgress: function(start,end,interval){
     var intervalId = setInterval(function(){
