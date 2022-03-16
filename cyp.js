@@ -64,7 +64,10 @@ var quiz = {
     });
     $('.js-nope-btn').on('click', function(){
 			var themeImg = quiz.getCurrentTheme();
-      quiz.themes.push(themeImg.data('theme'));
+      var themeData = themeImg.data('theme');
+      if (themeData){
+        quiz.themes.push(themeImg.data('theme'));
+      }
       themeImg.addClass("animate__fadeOutLeftBig");
       $('.js-nope').addClass('animate__wobble');
       $('.js-nope')[0].addEventListener('animationend', function(){
