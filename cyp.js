@@ -15,7 +15,7 @@ var quiz = {
     step1[0].addEventListener('animationend', function(){
       step1.removeClass('animate__zoomIn');
     });
-    $('.theme-container').css('height', $('.js-select-theme').css('height'));
+    
     $('.js-percent').resize(function(){
       var percentFull = Math.round((parseInt($('.js-percent').css('width'))/parseInt($('.js-percent-bar').css('width')))*100);
       $('.js-percent-number').text(percentFull+"%");
@@ -164,6 +164,7 @@ var quiz = {
     },1500)
   },
   pickThemes: function(){
+    $('.theme-container').css('height', $('.js-select-theme').css('height'));
   	var themes = $('.js-select-theme');
     quiz.currentTheme = 0;
     $(themes[quiz.currentTheme]).fadeIn();
