@@ -100,6 +100,9 @@ var quiz = {
   },
   next: function(){
     var currentStep = quiz.getCurrentStep();
+    if (quiz.totalSteps-quiz.currentStep == 0) {
+      return;
+    }
     currentStep.addClass('animate__fadeOutLeft');
     currentStep[0].addEventListener('animationend', function(){
       $(this).removeClass('');
