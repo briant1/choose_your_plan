@@ -73,7 +73,7 @@ var quiz = {
         if (themeData){
           quiz.themes.push(themeImg.data('theme'));
         }
-        themeImg.addClass("animate__fadeOutLeftBig");
+        themeImg.addClass("animate__fadeOutLeft");
         $('.js-nope').addClass('animate__wobble');
         $('.js-nope')[0].addEventListener('animationend', function(){
           $('.js-nope').removeClass('animate__wobble');
