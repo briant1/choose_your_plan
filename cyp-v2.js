@@ -78,7 +78,7 @@ var quiz = {
       
     },
     getCurrentTheme: function(){
-      return $($('.js-select-theme')[quiz.currentTheme]);
+      return $($('.js-select-theme')[$('.js-select-theme').length - quiz.currentTheme-1]);
     },
     nextTheme: function() {
       var theme = quiz.getCurrentTheme();
