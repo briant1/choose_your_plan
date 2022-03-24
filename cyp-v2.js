@@ -5,6 +5,7 @@ var quiz = {
     steps: null,
     level: null,
     currentTheme: 0,
+    isThemeBusy: false,
     themes: [],
     init: function() {
       quiz.totalSteps = $('.cyp-container').length;
@@ -54,13 +55,17 @@ var quiz = {
               $('.js-someone-else-popup').fadeOut();
       });
       $('.js-love-btn').on('click', function(){
-              var themeImg = quiz.getCurrentTheme();
-        themeImg.addClass('animate__rollOut');
-        $('.js-heart').addClass('animate__heartBeat');
-        $('.js-heart')[0].addEventListener('animationend', function(){
-          $('.js-heart').removeClass('animate__heartBeat');
-        });
-        quiz.nextTheme();
+        if (quiz.isThemeBusy == false){
+            quiz.isThemeBusy = true;
+            var themeImg = quiz.getCurrentTheme();
+            themeImg.addClass('animate__rollOut');
+            $('.js-heart').addClass('animate__heartBeat');
+            $('.js-heart')[0].addEventListener('animationend', function(){
+              $('.js-heart').removeClass('animate__heartBeat');
+            });
+            quiz.nextTheme();
+        }
+        
       });
       $('.js-nope-btn').on('click', function(){
               var themeImg = quiz.getCurrentTheme();
@@ -83,6 +88,7 @@ var quiz = {
     nextTheme: function() {
       var theme = quiz.getCurrentTheme();
       theme[0].addEventListener('animationend', function(){
+        quiz.isThemeBusy = false;
         if (quiz.currentTheme == $('.js-select-theme').length) {
           setTimeout(function(){ 
             quiz.next();
