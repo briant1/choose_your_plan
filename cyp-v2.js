@@ -92,11 +92,7 @@ var quiz = {
       });
       quiz.currentTheme++;
       $('.js-puzzle-meter-progress').css('width',(quiz.currentTheme*1.0/$('.js-select-theme').length)*100+"%");
-      theme = quiz.getCurrentTheme();
-      theme.addClass("animate__delayQuick animate__fadeIn");
-      theme[0].addEventListener('animationend', function(){
-        $(this).removeClass('animate__delayQuick');
-      });
+      
     },
     next: function(){
       var currentStep = quiz.getCurrentStep();
@@ -247,5 +243,5 @@ var quiz = {
    });
   });
   
-  
+
   
