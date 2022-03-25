@@ -207,11 +207,11 @@ var quiz = {
     setConfigurePlanProgress: function(progress){
       $('.js-percent').css({"width":progress+"%"});
       $('.js-percent-number').text(progress+"%");
+      $('.js-progress-person').css('left', progress+"%");
     },
     setProgressBar: function(){
         var percent = Math.round(((quiz.currentStep-1)*1.0/quiz.totalSteps)*100) + "%";
-      $('.js-progress-person').css('left', percent);  
-      $('.cyp-progress').css('width',percent);
+        $('.cyp-progress').css('width',percent);
     },
     finishPlanProgress: function(){
       $('.js-configure-plan-container').hide();
