@@ -99,6 +99,9 @@ var quiz = {
       quiz.currentTheme++;
       var percent = (quiz.currentTheme*1.0/$('.js-select-theme').length)*100;
       $('.js-puzzle-meter-progress').css('width',percent+"%");
+      if (percent == 100){
+          percent = 109;
+      }
       $('.js-progress-person').css('left',(percent-4)+"%");
     },
     next: function(){
