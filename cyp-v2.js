@@ -97,9 +97,9 @@ var quiz = {
         }
       });
       quiz.currentTheme++;
-      var percent = (quiz.currentTheme*1.0/$('.js-select-theme').length)*100+"%";
-      $('.js-puzzle-meter-progress').css('width',percent);
-      $('.js-progress-person').css('left',percent);
+      var percent = (quiz.currentTheme*1.0/$('.js-select-theme').length)*100;
+      $('.js-puzzle-meter-progress').css('width',(percent-4)+"%");
+      $('.js-progress-person').css('left',percent+"%");
     },
     next: function(){
       var currentStep = quiz.getCurrentStep();
