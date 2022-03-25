@@ -7,7 +7,7 @@ var quiz = {
     currentTheme: 0,
     isThemeBusy: false,
     themeValue: 0,
-    themeValues: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    themeValues: [31.93, 31.93, 27.94, 21.99, 27.94, 33.99, 31.93, 25.99, 31.93, 21.99, 21.99, 31.99, 27.94, 21.99, 21.99],
     themes: [],
     init: function() {
       quiz.totalSteps = $('.cyp-container').length;
