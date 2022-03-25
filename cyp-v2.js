@@ -6,6 +6,8 @@ var quiz = {
     level: null,
     currentTheme: 0,
     isThemeBusy: false,
+    themeValue: 0,
+    themeValues: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
     themes: [],
     init: function() {
       quiz.totalSteps = $('.cyp-container').length;
@@ -57,8 +59,10 @@ var quiz = {
       $('.js-love-btn').on('click', function(){
         if (quiz.isThemeBusy == false){
             quiz.isThemeBusy = true;
-            $('.js-puzzle-value').text(quiz.currentTheme*31.42);
             var themeImg = quiz.getCurrentTheme();
+
+            quiz.themeValue += quiz.themeValues[quiz.currentTheme];
+            $('.js-puzzle-value').text(quiz.themeValue);
             themeImg.addClass('animate__rollOut');
             $('.js-heart').addClass('animate__heartBeat');
             $('.js-heart')[0].addEventListener('animationend', function(){
