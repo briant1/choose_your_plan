@@ -98,8 +98,8 @@ var quiz = {
       });
       quiz.currentTheme++;
       var percent = (quiz.currentTheme*1.0/$('.js-select-theme').length)*100;
-      $('.js-puzzle-meter-progress').css('width',(percent-4)+"%");
-      $('.js-progress-person').css('left',percent+"%");
+      $('.js-puzzle-meter-progress').css('width',percent+"%");
+      $('.js-progress-person').css('left',(percent-4)+"%");
     },
     next: function(){
       var currentStep = quiz.getCurrentStep();
