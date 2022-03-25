@@ -97,8 +97,9 @@ var quiz = {
         }
       });
       quiz.currentTheme++;
-      $('.js-puzzle-meter-progress').css('width',(quiz.currentTheme*1.0/$('.js-select-theme').length)*100+"%");
-      
+      var percent = (quiz.currentTheme*1.0/$('.js-select-theme').length)*100+"%";
+      $('.js-puzzle-meter-progress').css('width',percent);
+      $('.js-progress-person').css('left',percent);
     },
     next: function(){
       var currentStep = quiz.getCurrentStep();
@@ -207,7 +208,6 @@ var quiz = {
     setConfigurePlanProgress: function(progress){
       $('.js-percent').css({"width":progress+"%"});
       $('.js-percent-number').text(progress+"%");
-      $('.js-progress-person').css('left', progress+"%");
     },
     setProgressBar: function(){
         var percent = Math.round(((quiz.currentStep-1)*1.0/quiz.totalSteps)*100) + "%";
