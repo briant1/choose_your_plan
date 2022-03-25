@@ -174,7 +174,7 @@ var quiz = {
     },
     cyp: function() {
       setTimeout(function(){
-        $('.js-flash-sale-banner').addClass("animate__fadeInDown").show();
+        //$('.js-flash-sale-banner').addClass("animate__fadeInDown").show();
       },1500)
     },
     pickThemes: function(){
