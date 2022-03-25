@@ -57,6 +57,7 @@ var quiz = {
       $('.js-love-btn').on('click', function(){
         if (quiz.isThemeBusy == false){
             quiz.isThemeBusy = true;
+            $('.js-puzzle-value').text(quiz.currentTheme*31.42);
             var themeImg = quiz.getCurrentTheme();
             themeImg.addClass('animate__rollOut');
             $('.js-heart').addClass('animate__heartBeat');
@@ -102,7 +103,6 @@ var quiz = {
       if (percent == 100){
           percent = 109;
       }
-      $('.js-puzzle-value').text(quiz.currentTheme*22);
       $('.js-progress-person').css('left',(percent-4)+"%");
     },
     next: function(){
