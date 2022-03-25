@@ -209,7 +209,9 @@ var quiz = {
       $('.js-percent-number').text(progress+"%");
     },
     setProgressBar: function(){
-      $('.cyp-progress').css('width',Math.round(((quiz.currentStep-1)*1.0/quiz.totalSteps)*100) + "%");
+        var percent = Math.round(((quiz.currentStep-1)*1.0/quiz.totalSteps)*100) + "%";
+      $('.js-progress-person').css('left', percent);  
+      $('.cyp-progress').css('width',percent);
     },
     finishPlanProgress: function(){
       $('.js-configure-plan-container').hide();
