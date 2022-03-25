@@ -102,6 +102,7 @@ var quiz = {
       if (percent == 100){
           percent = 109;
       }
+      $('.js-puzzle-value').text(quiz.currentTheme*22);
       $('.js-progress-person').css('left',(percent-4)+"%");
     },
     next: function(){
