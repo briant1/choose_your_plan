@@ -62,8 +62,8 @@ var quiz = {
             var themeImg = quiz.getCurrentTheme();
 
             quiz.themeValue = quiz.themeValue + quiz.themeValues[quiz.currentTheme]; 
-            quiz.themeValue = (Math.round(quiz.themeValue * 100) / 100).toFixed(2)
-            $('.js-puzzle-value').text(quiz.themeValue);
+            var num = (Math.round(quiz.themeValue * 100) / 100).toFixed(2)
+            $('.js-puzzle-value').text(num);
             themeImg.addClass('animate__rollOut');
             $('.js-heart').addClass('animate__heartBeat');
             $('.js-heart')[0].addEventListener('animationend', function(){
